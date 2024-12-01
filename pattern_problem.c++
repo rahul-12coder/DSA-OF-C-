@@ -1,7 +1,3 @@
-# DSA-OF-C++-
-This is my first reprositry
-author - rahul singh
-
 PATTERN PROBLEMS:
 
 #include<iostream>
