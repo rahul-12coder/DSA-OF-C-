@@ -1,0 +1,176 @@
+FUNCTION :-
+
+#include<iostream>
+using namespace std;
+//FUNCTION DEFINATION
+int min(int a,int b){      //PARAMETERS
+   if(a>b){
+      return b;
+   }
+   else{
+      return a;
+   }
+}
+int main(){
+   //FUNCTION CALL
+   cout<<"smallest no = "<<min(10,20)<<endl;     //ARGUMENTS
+   return 0;
+}
+
+#include<iostream>
+using namespace std;
+int sum(int a){
+   int sum=0;
+   for(int i=1;i<=a;i++){                 // calculate sum of numbers from 1 to n
+      sum+=i;
+   }
+   return sum;
+}
+int main(){
+   int n;
+   cout<<"Enter a Number = ";
+   cin>>n;
+   cout<<"sum of n = "<<sum(n)<<endl;
+return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int factorial(int n){
+   int fact=1;
+   for(int i=n;i>=1;i--){                      //calculate of factorial of n
+      fact*=i;
+   }
+   return fact;
+}
+int main(){
+   int n;
+   cout<<"Enter a number = ";
+   cin>>n;
+   cout<<"factorail of n = "<<factorial(n)<<endl;
+   return 0;
+}
+
+#include<iostream>
+using namespace std;
+int sum_digits(int a){
+   int sum=0;
+   for(int i=a;i>0;i--){           // claculate sumof digits of a number
+      int n=a%10;
+      sum+=n;
+      a=a/10;
+   }
+return sum;
+}
+int main(){
+   int n;
+   cout<<"Enter Your no. = ";
+   cin>>n;
+   cout<<"Sum og digits = "<<sum_digits(n)<<endl;
+   return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int factorial(int n){
+   int fact=1;
+   for(int i=n;i>=1;i--){                      // factorial 
+      fact*=i;
+   }
+   return fact;
+}
+int binomial_cofficent(int n,int r){
+   int b=factorial(r)*factorial(n-r);
+   int c=factorial(n)/b;                       //calculate nCr binomical cofficient for n & r
+   return c;
+}
+int main(){
+   int n,r;
+   cout<<"enter your n = ";
+   cin>>n;
+   cout<<"enter your r = ";
+   cin>>r;
+   cout<<"nCr of binomial cofficient = "<<binomial_cofficent(n,r)<<endl;
+   return 0;
+   }
+
+prime or not
+all prime no. from 1 to n
+nth no. of fibanaqcci
+
+#include<iostream>
+using namespace std;
+int  prime_no(int a){
+    int i=1;
+    int count=0;
+    while(i<=a){
+        if(a%i==0){
+            count++;
+        }  
+        i++;
+    }                                                    //prime no.
+    if(count==2){
+        cout<<"The Given no. is Prime No. = "<<a<<endl;
+    }
+    else{
+        cout<<"The given no. is not Prime no. = "<<a<<endl;
+    }
+}
+int main(){
+    int n;
+    cout<<"Enter a no. = ";
+    cin>>n;
+    prime_no(n);
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int prime_N(int a){
+    int i=1;
+    int count=0;
+    while(i<=a){
+        if(a%i==0){
+            count++;
+        }  
+        i++;
+    }                                                    //prime no. between 1 to n.
+    if(count==2){
+        cout<<a<<" ";
+    }
+    
+    
+}
+int main(){
+    int n;
+    cout<<"Enter a nth no. = ";
+    cin>>n;
+    cout<<"prime No Between 1 to "<<n<<" is:"<<endl;
+    for(int i=1;i<=n;i++){
+        prime_N(i);
+    }
+return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int fibonacci_nth(int n){
+    int a=0;
+    int b=1;
+    for(int i=0;i<n;i++){
+        a=b;
+        b=a+b;
+        cout<<a<<" ";
+        
+    }
+}
+int main(){
+    int n;
+    cout<<"Enter a No. = ";
+    cin>>n;
+    fibonacci_nth(n);
+    return 0;
+}
