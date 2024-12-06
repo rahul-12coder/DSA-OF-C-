@@ -1,0 +1,90 @@
+#include<iostream>
+using namespace std;
+int deci_bina(int deci_no){
+   int binary=0;
+   int power=1;
+   while(deci_no>0){
+    int rem=deci_no%2;
+    deci_no=deci_no/2;                    // decimal to binary no.
+    binary+=rem*power;
+    power*=10;
+   }
+   return binary;
+}
+int main(){
+    int deci_no;
+    cout<<"Enter A Decimal No = ";
+    cin>>deci_no;
+    cout<<"Binary No = "<<deci_bina(deci_no)<<" ";
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int binary_to_decimal(int binNum){
+    int deci=0;
+    int power=1;
+    while(binNum>0){
+       int rem=binNum%10;
+        deci+=rem*power;                          // binary to decimal no.
+        binNum=binNum/10;
+        power*=2;
+    }
+    return deci;
+}
+int main(){
+    int binNum;
+    cout<<"Enter a Binary Number = ";
+    cin>>binNum;
+    cout<<"The decimal Number = "<<binary_to_decimal(binNum);
+    return 0;
+}
+
+
+
+Bitwise Operators!!
+HOMEWORK!!
+#include<iostream>
+using namespace std;
+int reverse(int n){
+    int i=0;
+    int rev=0;
+    while(n>0){
+        int d=n%10;
+        rev=rev*10+d;
+        n=n/10;
+    }
+    return rev;                               // reverse an integer n.
+}
+int main(){
+    int n,rev=0;
+    cout<<"Enter a number = ";
+    cin>>n;
+    cout<<"the reverse "<<reverse(n)<<endl;
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+int ck_power(int n){
+    for(int i=n;i>0;i--){
+        if(n>1){
+            n-=2;
+        }
+    }
+         if(n==1){
+            return false;
+        }                                             // check the number is power of 2 or not.
+        else if(n==0){
+            return true;
+        }
+    
+}
+int main(){
+    int n;
+    char z[10];
+    cout<<"Enter a number = ";
+    cin>>n;
+    cout<<"Power of 2 = "<<ck_power(n)<<endl;
+    return 0;
+}
